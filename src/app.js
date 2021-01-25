@@ -29,11 +29,6 @@ class Team {
   }
 
   * [Symbol.iterator]() {
-    const team = this.members;
-    const teamArr = [];
-    for (const person of team) {
-      teamArr.push(person);
-    }
-    for (let i = 0; i < teamArr.length; i++) yield teamArr[i];
+    for (const person of this.members) yield person;
   }
 }
